@@ -53,7 +53,7 @@ def prepare_clf_data(df, target, include_fearues=None, exclude_features=None, cl
         X = df.drop(columns=target)
 
     # Create binary target (y): 1 if more rat sightings than threshold, 0 otherwise
-    y = df["TOTAAL"].apply(lambda x: 1 if pd.notna(x) and x > clf_treshold else 0)
+    y = df[target].apply(lambda x: 1 if pd.notna(x) and x > clf_treshold else 0)
 
     return X, y
 

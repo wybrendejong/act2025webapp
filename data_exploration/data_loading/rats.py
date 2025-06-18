@@ -127,8 +127,6 @@ def group_by_month(df, fillna=False):
 
     return month_rat_df
 
-
-
 def translate_data(df):
     """Translates a dataframe with rat sightings into English.
     
