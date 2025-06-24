@@ -1,3 +1,4 @@
 map/
 Other/
-data/
+__pycache__/
+src/__pycache__/
