@@ -10,7 +10,7 @@ def load_rm_data(io) -> pd.DataFrame:
     """
     Loads rat monitor export data into a pandas dataframe. 
    
-    Takes a file path and keyword arguments, loads data into a dataframa and pre-processes the data.
+    Takes a file, loads the data into a dataframa and pre-processes the data.
     Returns a dataframe with all data (for the selected year) from the rat monitor export file.
 
     Args:
