@@ -4,3 +4,5 @@ src/__pycache__/
 data/rat_gdf.gpkg
 data/rat_proba_gdf.gpkg
 data/metrics.json
+data/rat_data.gpkg
+data/Rat_Monitor_reports_export_20241230.xlsx
