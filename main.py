@@ -1,11 +1,3 @@
-from nicegui import ui, html, app
-from fastapi.staticfiles import StaticFiles
-import json
-import sys
-import geopandas as gpd
-import folium
-import pandas as pd
-import branca.colormap as cm
 from pathlib import Path
 import os
 from src.webapp import WebApp

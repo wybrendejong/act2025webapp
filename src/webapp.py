@@ -3,18 +3,15 @@
 # webGUI
 """
 import matplotlib
-import pyogrio
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 import random
-from nicegui import ui, html, app, events
+from nicegui import ui, app, events
 from fastapi.staticfiles import StaticFiles
 import json
 import geopandas as gpd
 import pandas as pd
-import branca.colormap as cm
-from pathlib import Path
 import os
 from io import BytesIO
 import matplotlib
