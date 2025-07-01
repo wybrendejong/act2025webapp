@@ -112,13 +112,15 @@ class WebApp():
 
         # Plot the historical rat sightings for the past year
         fig, ax = plt.subplots(figsize=(6, 3))
-        historic_df = historic_df.sort_values('month').head(12)
-        ax.plot(historic_df['month'], historic_df['TOTAAL'])
+        historic_df = historic_df.sort_values('month').tail(12)
+        ax.bar(historic_df['month'], historic_df['TOTAAL'], width = pd.Timedelta(30, 'days'))
         ax.set_xlabel('Month')
         ax.set_ylabel('TOTAAL')
         ax.set_title(f"Rat Sightings for Postal Code {postal_code} in the previous 12 months")
         ax.set_ylim(bottom=0)
         plt.tight_layout()
+
+        print(historic_df)
 
         # Write the plot to an IO buffer and display it in the graph frame
         buf = BytesIO()

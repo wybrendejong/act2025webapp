@@ -31,9 +31,10 @@ def update_map(gdf: gpd.GeoDataFrame) -> folium.Map:
         data=gdf,
         columns=['postcode','prob_positive'],
         key_on='feature.properties.postcode',
-        fill_color='YlGnBu',
+        bins=[x/10 for x in range(11)],
+        fill_color='Blues',
         fill_opacity=0.7,
-        line_opacity=0.2,
+        line_opacity=0.3,
         legend_name='Probability of Rat Sighting'
     ).add_to(m)
 
